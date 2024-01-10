@@ -1,0 +1,32 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.menu {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu.open {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+.menu img {
+  height: 50px;
+}
+
+.menu ul {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.menu li {
+  list-style-type: none;
+}
