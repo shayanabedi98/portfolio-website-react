@@ -9,16 +9,18 @@ const Navbar = ({ onClick }) => {
   };
 
   return (
-    <div className={`menu${isMenuOpen ? " open" : ""}`}>
-      {isMenuOpen && (
-        <ul>
-          <li onClick={() => onClick("home")}>Home</li>
-          <li onClick={() => onClick("projects")}>Projects</li>
-          <li onClick={() => onClick("about")}>About</li>
-          <li onClick={() => onClick("contact")}>Contact</li>
-        </ul>
-      )}
-      <img onClick={toggleMenu} src={menu} alt="Menu icon" />
+    <div className="navbar" style={{gridTemplateColumns: !isMenuOpen && "1fr"}}>
+      <div className={`menu${isMenuOpen ? " open" : ""}`}>
+        {isMenuOpen && (
+          <ul>
+            <li onClick={() => onClick("home")}>Home</li>
+            <li onClick={() => onClick("projects")}>Projects</li>
+            <li onClick={() => onClick("about")}>About</li>
+            <li onClick={() => onClick("contact")}>Contact</li>
+          </ul>
+        )}
+      </div>
+      <img className={isMenuOpen ? "clicked" : ""} onClick={toggleMenu} src={menu} alt="Menu icon" />
     </div>
   );
 };
